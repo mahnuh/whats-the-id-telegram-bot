@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch'
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 
@@ -8,7 +8,7 @@ function sendMessage(chatId, text) {
   return fetch(url);
 }
 
-module.exports.handler = async (event) => {
+export const handler = async (event) => {
   const body = JSON.parse(event.body);
   console.log(body);
 
